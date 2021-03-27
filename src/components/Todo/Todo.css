@@ -1,0 +1,31 @@
+.todo{
+    display:grid;
+    grid-template-columns: [todo-start]70%[todo-end option-start] 30%[option-end];
+    padding:2.5rem 3rem;
+    font-size: 2rem;
+    font-family: var(--font-primary);
+    background-color: #fff;
+    border-bottom: 2px solid #000;
+
+}
+
+.options{
+    grid-column: option-start/option-end;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.done{
+    /* text-decoration: line-through; */
+    grid-column: todo-start/todo-end;
+    color:var(--color-grey-light-3);
+    text-transform: capitalize;
+
+}
+
+.todoText{
+    grid-column: todo-start/todo-end;
+    color:var(--color-grey-dark-2);
+    text-transform: capitalize;
+}

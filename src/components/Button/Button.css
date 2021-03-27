@@ -1,0 +1,19 @@
+.btn{
+    padding:1rem 1.5rem;
+    margin:0 1rem;
+    border-radius: 5rem;
+    font-size: 1.8rem;
+    font-family: var(--font-display);
+    outline:none;
+    width: 12rem;
+    text-transform: capitalize;
+    box-shadow:0 2rem 3rem rgba(#000,.5);
+    color:var(--color-grey-light-1);
+    background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-primary-dark));
+    text-align: center;
+}
+
+.btn:hover{
+    outline:none;
+    box-shadow: 0 5px 10px rgba(#000,0.2);
+} 

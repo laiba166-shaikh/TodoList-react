@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from "react";
+import Header from "./components/Header/Header";
+import Form from "./components/Form/Form";
+import TodosContainer from "./components/TodosContainer/TodosContainer";
+import Filters from "./components/Filters/Filters";
+import "./App.css";
+import { ThemeContext } from "./Context/ThemeContext";
 
-function App() {
+const App = () => {
+  // var { theme, setLightTheme, setDarkTheme } = useContext(ThemeContext);
+  // console.log(theme.backgroundColor, theme.btnColor, theme.textColor);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      {
+        // <button onClick={setLightTheme}>SET LIGHT THEME</button>
+        // <button onClick={setDarkTheme}>SET Dark THEME</button>
+      }
+      <div className="App">
+        <Header />
+        <Form />
+        <TodosContainer />
+        <Filters />
+      </div>
     </div>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,10 @@
+.heading{
+    grid-area: 'header';
+    font-size: 3.5rem;
+    font-family: var(--font-display);
+    font-weight: 300;
+    color: var(--color-grey-dark-3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

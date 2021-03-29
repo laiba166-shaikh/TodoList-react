@@ -1,8 +1,9 @@
-.heading {
+.header {
   font-size: 3.5em;
   font-family: var(--font-primary);
   font-weight: 500;
-  /* display: flex;
-    justify-content: center;
-    align-items: center; */
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

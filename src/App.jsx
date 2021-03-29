@@ -5,7 +5,6 @@ import TodosContainer from "./components/TodosContainer/TodosContainer";
 import Filters from "./components/Filters/Filters";
 import "./App.css";
 import { ThemeContext } from "./Context/ThemeContext";
-// import CountryList from "./components/CountryList";
 
 const App = () => {
   var { theme, setLightTheme, setDarkTheme } = useContext(ThemeContext);

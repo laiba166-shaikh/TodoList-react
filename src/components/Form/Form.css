@@ -1,6 +1,5 @@
 .form {
   padding: 1em 0;
-  /* background-color: aqua; */
   display: grid;
   grid-template-columns: 1fr min-content;
   column-gap: 1em;
@@ -14,13 +13,11 @@
   border-radius: 5px;
   background-color: rgba(#333, 0.3);
   padding: 0 0.5em;
-  /* border-bottom: 3px solid transparent; */
 }
 
 .form__input:focus {
   outline: none;
   box-shadow: 0 1em 2em rgba(#000, 0.2);
-  /* border-bottom: 3px solid var(--color-primary-dark); */
 }
 
 .btn_container {
@@ -36,7 +33,7 @@
   border-radius: 50px;
   font-size: 1.5em;
   font-family: var(--font-primary);
-  transition: all 500ms ease-in-out;
+  transition: all 400ms ease-in-out;
   box-shadow: 0 2em 3em rgba(#000, 0.5);
 }
 

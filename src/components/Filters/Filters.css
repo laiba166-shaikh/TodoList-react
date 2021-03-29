@@ -1,5 +1,7 @@
-.filters{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.filters {
+  display: flex;
+  padding: 1em;
+  align-items: center;
+  justify-content: center;
+  /* background-color: aquamarine; */
 }

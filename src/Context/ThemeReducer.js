@@ -5,15 +5,17 @@ const themeReducer = (state, action) => {
   switch (type) {
     case SET_LIGHT_THEME:
       return {
-        backgroundColor: "#fff",
-        btnColor: "#b28451",
+        backgroundColor: "#f5f5f5",
+        btnBgColor: "#b28451",
         textColor: "#999",
+        btnTextColor: "f9f7f6",
       };
     case SET_DARK_THEME:
       return {
         backgroundColor: "#333",
-        btnColor: "#0b1787",
-        textColor: "#f9f7f6",
+        btnBgColor: "#0b1787",
+        textColor: "#d3d3d3",
+        btnTextColor: "#f9f7f6",
       };
     default:
       return state;

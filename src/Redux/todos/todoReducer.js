@@ -1,46 +1,50 @@
-import {ADD_TODO, DELETE_TODO, COMPLETE_TODO, ACTIVE_TODO} from './todoConstants';
+import {
+  ADD_TODO,
+  DELETE_TODO,
+  COMPLETE_TODO,
+  ACTIVE_TODO,
+  SEARCH_TODO,
+  RESET_SEARCH_TODO,
+} from "./todoConstants";
+import {
+  searchUserTodos,
+  setCompleteTodos,
+  setActiveTodos,
+} from "../../utility/filterTodos";
 
-const initialState=[];
+const initialState = {
+  todos: [],
+  searchTodos: [],
+};
 
-const todoReducer=(state=initialState,action)=>{
-    const {type,payload}=action
-    switch(type){
-        case ADD_TODO:
-            return [...state,payload.todo]
-        case DELETE_TODO:
-            return state.filter(t => t.id !== payload.id)
-        case COMPLETE_TODO:
-            return state.map(todo => {
-                if(todo.id === payload.id){
-                    return {
-                        ...todo,
-                        completed:true
-                    }
-                }else{
-                    return {...todo}
-                }
-            })
-        case ACTIVE_TODO:
-            return state.map(todo => {
-                if(todo.id === payload.id){
-                    return {
-                        ...todo,
-                        completed:false
-                    }
-                }else{
-                    return {...todo}
-                }
-            })
-        // case ALL_TODOS:
-        //     return state
-        // case COMPLETED_TODOS:
-        //     return state.filter((todo)=> todo.completed === true )
-        // case ACTIVE_TODOS:
-        //     return state.filter((todo)=> todo.completed === false )
-        default:
-            return state
-    }
-}
+const todoReducer = (state = initialState, action) => {
+  const { type, payload } = action;
+  switch (type) {
+    case ADD_TODO:
+      return { ...state, todos: [...state.todos, payload.todo] };
+    case DELETE_TODO:
+      return {
+        ...state,
+        todos: state.todos.filter((t) => t.id !== payload.id),
+      };
+    case COMPLETE_TODO:
+      return { ...state, todos: setCompleteTodos(state.todos, payload.id) };
+    case ACTIVE_TODO:
+      return { ...state, todos: setActiveTodos(state.todos, payload.id) };
+    case SEARCH_TODO:
+      return {
+        ...state,
+        searchTodos: searchUserTodos(state.todos, payload.searchValue),
+      };
+    case RESET_SEARCH_TODO:
+      return {
+        ...state,
+        searchTodos: [],
+      };
+    default:
+      return state;
+  }
+};
 
 export default todoReducer;
 

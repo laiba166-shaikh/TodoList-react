@@ -1,31 +1,28 @@
-.todo{
-    display:grid;
-    grid-template-columns: [todo-start]70%[todo-end option-start] 30%[option-end];
-    padding:2.5rem 3rem;
-    font-size: 2rem;
-    font-family: var(--font-primary);
-    background-color: #fff;
-    border-bottom: 2px solid #000;
-
+.todo {
+  display: grid;
+  grid-template-columns: 60fr 40fr;
+  align-items: center;
+  padding: 1.5em 0.8em;
+  font-family: var(--font-display);
+  /* background-color: #fff; */
+  border-bottom: 2px solid #000;
 }
 
-.options{
-    grid-column: option-start/option-end;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+.options {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* background-color: aqua; */
 }
 
-.done{
-    /* text-decoration: line-through; */
-    grid-column: todo-start/todo-end;
-    color:var(--color-grey-light-3);
-    text-transform: capitalize;
-
+.done {
+  text-decoration: line-through;
+  text-transform: capitalize;
+  font-size: 2.4em;
 }
 
-.todoText{
-    grid-column: todo-start/todo-end;
-    color:var(--color-grey-dark-2);
-    text-transform: capitalize;
+.todoText {
+  /* color:var(--color-grey-dark-2); */
+  text-transform: capitalize;
+  font-size: 2.4em;
 }

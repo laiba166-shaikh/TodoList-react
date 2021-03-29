@@ -1,57 +1,60 @@
 .form {
-  padding: 2rem 1.5rem;
-  text-align: center;
-  grid-area: "form";
+  padding: 1em 0;
+  /* background-color: aqua; */
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  column-gap: 1em;
+  align-items: center;
 }
 
 .form__input {
-  font-family: var(--font-primary);
-  font-size: 2rem;
-  border: 1px solid #000;
-  width: 35rem;
+  font-family: var(--font-display);
+  font-size: 2.4em;
+  height: 2em;
   border-radius: 5px;
-  padding: 1.5rem 2rem;
   background-color: rgba(#333, 0.3);
+  padding: 0 0.5em;
   /* border-bottom: 3px solid transparent; */
 }
 
 .form__input:focus {
   outline: none;
-  border-bottom: 3px solid var(--color-primary-dark);
-  box-shadow: 0 1rem 2rem rgba(#000, 0.2);
+  box-shadow: 0 1em 2em rgba(#000, 0.2);
+  /* border-bottom: 3px solid var(--color-primary-dark); */
 }
 
-.form__input::-webkit-input-placeholder {
-  color: var(--color-grey-light-1);
+.btn_container {
+  /* background-color: coral; */
+  display: flex;
 }
 
-.add__btn {
-  margin: 0 2rem;
-  width: 15rem;
+.option_button {
+  margin: 0 1em;
+  padding: 0.8em;
   outline: none;
-  color: var(--color-grey-light-1);
-  padding: 1.5rem 2rem;
+  width: 7.5em;
   border-radius: 50px;
-  border: none;
-  font-size: 2.5rem;
-  font-family: var(--font-display);
-  box-shadow: 0 2rem 3rem rgba(#000, 0.5);
-  background-image: linear-gradient(
-    to right bottom,
-    var(--color-primary),
-    var(--color-primary-dark)
-  );
-  transition: all 0.5s ease-in-out;
+  font-size: 1.5em;
+  font-family: var(--font-primary);
+  transition: all 500ms ease-in-out;
+  box-shadow: 0 2em 3em rgba(#000, 0.5);
 }
 
-.add__btn:hover {
+.option_button:hover {
   outline: none;
-  transform: translateY(-0.1rem);
+  transform: translateY(-0.1em);
   box-shadow: 0 5px 10px rgba(#000, 0.2);
 }
 
-.add__btn:active {
+.option_button:active {
   outline: none;
-  transform: translateY(0rem);
+  transform: translateY(0em);
   box-shadow: 0 5px 10px rgba(#000, 0.2);
+}
+
+.cancel {
+  font-size: 3em;
+  padding: 0.2em 0.5em;
+  margin-right: 0.5em;
+  cursor: pointer;
 }

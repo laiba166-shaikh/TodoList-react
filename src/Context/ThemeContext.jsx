@@ -5,9 +5,10 @@ import { SET_DARK_THEME, SET_LIGHT_THEME } from "./ThemeConstants";
 export var ThemeContext = React.createContext();
 
 var initialValue = {
-  backgroundColor: "#fff",
-  btnColor: "#b28451",
+  backgroundColor: "#f5f5f5",
+  btnBgColor: "#b28451",
   textColor: "#999",
+  btnTextColor: "#f9f7f6",
 };
 
 const ThemeProvider = ({ children }) => {

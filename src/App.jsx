@@ -7,14 +7,10 @@ import "./App.css";
 import { ThemeContext } from "./Context/ThemeContext";
 
 const App = () => {
-  var { theme, setLightTheme, setDarkTheme } = useContext(ThemeContext);
+  var { theme } = useContext(ThemeContext);
   // console.log(theme.backgroundColor, theme.btnColor, theme.textColor);
   return (
     <div className="container" style={{ background: theme.backgroundColor }}>
-      {
-        // <button onClick={setLightTheme}>SET LIGHT THEME</button>
-        // <button onClick={setDarkTheme}>SET Dark THEME</button>
-      }
       <div
         className="app"
         style={{

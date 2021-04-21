@@ -4,7 +4,6 @@ import { setFilterStatus } from "../../Redux/filter/filterActions";
 import { connect } from "react-redux";
 import "./Filters.css";
 import SearchIcon from "@material-ui/icons/Search";
-import IconButton from "@material-ui/core/IconButton";
 import { resetSearchTodos } from "../../Redux/todos/todoActions";
 
 class Filters extends React.Component {

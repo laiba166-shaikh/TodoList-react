@@ -1,10 +1,7 @@
 export const searchUserTodos = (todos, searchValue) => {
   var searchTodos = [];
-  todos.map((todo) => {
-    if (todo.description.includes(searchValue)) {
-      searchTodos.push(todo);
-    }
-    return todo;
+  searchTodos = todos.filter((todo) => {
+    return todo.description.includes(searchValue);
   });
   return searchTodos;
 };

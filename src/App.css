@@ -60,3 +60,59 @@ button {
   padding: 10px 1em;
   margin: 1em;
 }
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    font-size: 56.25%; /*9px*/
+  }
+  .app {
+    /* border: 1px solid #000; */
+    height: 58em;
+    width: 56em;
+    padding: 1em;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    font-size: 50%; /*8px*/
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    font-size: 37.5%; /*6px*/
+  }
+
+  .app {
+    height: 75em;
+    width: 65em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    font-size: 30%; /*4.8px*/
+  }
+
+  .app {
+    height: 80em;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+    font-size: 27%; /*4.4px*/
+  }
+
+  .app {
+    margin: 2em;
+    height: 84em;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .container {
+    font-size: 25%; /*4px*/
+  }
+}

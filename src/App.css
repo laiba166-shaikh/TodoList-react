@@ -48,8 +48,8 @@
 
 .app {
   /* border: 1px solid #000; */
-  height: 65em;
-  width: 62em;
+  height: 60em;
+  width: 58em;
   border-radius: 1em;
   padding: 1em;
   display: grid;
@@ -61,7 +61,7 @@ button {
   margin: 1em;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1400px) {
   .container {
     font-size: 56.25%; /*9px*/
   }
